@@ -42,11 +42,7 @@ def check():
 			if is_in_db(s.id) == False:
 				donation = calculate_donation(s.text)
 				total = total + donation
-				try:
-					donation_success = propublica.donate(donation, s.id)
-				except:
-					logging.warning("Something went wrong with donation for tid {}".format(s.id))
-					donation_success = False
+				donation_success = propublica.donate(donation, s.id)
 				record = models.Tweet(
 					text = s.text,
 					tid = s.id,

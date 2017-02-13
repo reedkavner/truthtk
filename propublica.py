@@ -45,7 +45,7 @@ def donate(donation_amount, tid):
 		logging.info('Donation success: ${} for tid {}'.format(donation_amount, tid))
 		return True
 	else:
-		print str(response.read())
+		logging.warning(response.read())
 		logging.warning('Donation failed: ${} for tid {}'.format(donation_amount, tid))
 		return False
 
