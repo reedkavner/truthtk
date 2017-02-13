@@ -1,1 +1,17 @@
+appdirs==1.4.0
+click==6.7
 Flask==0.12
+future==0.16.0
+itsdangerous==0.24
+Jinja2==2.9.5
+MarkupSafe==0.23
+mechanize==0.2.5
+oauthlib==2.0.1
+packaging==16.8
+pyparsing==2.1.10
+python-twitter==3.2.1
+requests==2.13.0
+requests-oauthlib==0.7.0
+requests-toolbelt==0.7.0
+six==1.10.0
+Werkzeug==0.11.15

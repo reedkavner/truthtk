@@ -13,6 +13,7 @@
 # limitations under the License.
 
 from google.appengine.ext import vendor
-
-# Add any libraries installed in the "lib" folder.
 vendor.add('env/lib/python2.7/site-packages')
+
+from google.appengine.api import urlfetch
+urlfetch.set_default_fetch_deadline(60)

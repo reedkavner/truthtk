@@ -1,0 +1,4 @@
+cron:
+- description: checks for tweets every 5 minutes
+  url: /admin/check
+  schedule: every 5 minutes

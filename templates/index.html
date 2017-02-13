@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>TruthTK</title>
+	<meta name="description" content='TruthTK is a bot that donates to ProPublica whenever @realDonaldTrump tweets "fake news"'>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="/static/css/index.css" type="text/css" media="all" charset="utf-8" />
+</head>
+
+<body>
+	<div id="container">
+		<img id="donald-mag" src="/static/img/donald-mag.jpg">
+
+		<div id="main">
+			<h1>TruthTK is a bot that donates to ProPublica whenever @realDonaldTrump tweets "fake news."</h1>
+
+			<span id="donation-total">${{ total }}</span>
+			<span id="donation-subtitle">donated since Feb 12, 2017</span>
+
+			<p class="question">Why?</p>
+			<p class="answer">Trump's relationship with the truth is troubling and his efforts to discredit legitimate journalists are chilling. Supporting ProPublica's work is a small way to fight back.</p>
+
+			<p class="question">How much does it donate?</p>
+			<p class="answer">This is the fun part!
+			<ul>
+				<li>$1 for any tweet containing "fake news"</li>
+				<li>+ $1 if "FAKE NEWS" is in all caps</li>
+				<li>+ $1 if he mentions either @cnn or @nytimes</li>
+				<li>+ $1 if he incorrectly calls @nytimes "failing"</li>
+				<li>+ $5 if he mentions @propublica (which he never has)</li>
+			</ul>
+
+			For example: <span class="quote-tweet">The failing @nytimes does major FAKE NEWS China story saying "Mr.Xi has not spoken to Mr. Trump since Nov.14." We spoke at length yesterday!</span> is good for $4.
+			</p>
+
+			<p class="question">What is ProPublica?</p>
+			<p class="answer">They're a Pulitzer-winning nonprofit investigative newsroom. Learn more about them and their work at <a href="https://www.propublica.org">propublica.org</a>. The bot is not affiliated with them.</p>
+
+			<p class="question">How can I participate?</p>
+			<p class="answer">This project is open source! <a href="https://github.com/reedkavner/truthtk">Grab the code from GitHub</a> to run your own TruthTK bot.</p>
+
+			<p class="answer">You can also <a href="https://www.propublica.org/donate">donate to ProPublica</a> the regular way.</p>
+
+			<p class="question">What's up with the name?</p>
+			<p class="answer">"TK" is newsroom speak for "to come." With a President who has a habit of making up his own facts, a well-supported idependent press is our best hope for pushing the conversation towards truth.</p>
+		</div>
+
+		<p id="30">–30–</p>
+
+		<p>TruthTK was made by <a href="https://www.twitter.com/reedkavner">Reed Kavner</a>. It was inspired by the <a href="https://medium.com/@nathanpryor/the-aclu-dash-button-16719e446363#.gg3dv9r8b">ACLU Dash button<a>.</p>
+	</div>
+
+</body>
+
+</html>

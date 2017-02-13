@@ -1,23 +1,29 @@
 import appengine_config
 import logging
-from flask import Flask
-import donation
+from flask import Flask, render_template
+import tweets
+import urllib2
+import propublica
+import models
 
 app = Flask(__name__)
 
-
 @app.route('/')
 def home():
-    return 'Hello World!'
+	total = 0
+	q = models.Tweet.query().fetch(limit=1000)
+	for t in q:
+		total += t.donation
 
-@app.route('/test')
+	return render_template('index.html', total=total)
+
+@app.route('/admin/check')
 def test():
-    return donation.donate()
+	return str(tweets.check())
 
 
 @app.errorhandler(500)
 def server_error(e):
-    # Log the error and stacktrace.
-    logging.exception('An error occurred during a request.')
-    return 'An internal error occurred.', 500
-# [END app]
+	# Log the error and stacktrace.
+	logging.exception('An error occurred during a request.')
+	return 'An internal error occurred.', 500
